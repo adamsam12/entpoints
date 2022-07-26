@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "61423309-f925-4c8a-9c54-bd6aa7469abb",
+		"name": "Movements",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movements",
+			"item": [
+				{
+					"name": "MovementsCreateCredit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 800.0,\r\n    \"dateLimit\": \"24-05-2022\",\r\n    \"commission\": 9.10,\r\n    \"description\":\"description\",\r\n    \"idCredit\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/movements/credit/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movements",
+								"credit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsCreateDebit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 800.0,\r\n    \"dateLimit\": \"24-05-2022\",\r\n    \"commission\": 9.10,\r\n    \"description\":\"description\",\r\n    \"idCredit\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/movements/debit/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movements",
+								"debit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsGetAllCredit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/movementBank/credit/allMovementCredits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movementBank",
+								"credit",
+								"allMovementCredits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/movementBank/credit/62827df95d138250b0679936",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movementBank",
+								"credit",
+								"62827df95d138250b0679936"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsUpdateCredit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":1500.0,\r\n    \"dateLimit\": \"22-06-2022\",\r\n    \"commission\": 4.25,\r\n    \"description\":\"Reservas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/movementBank/credit/update/6294f584de37460839b1f685",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movementBank",
+								"credit",
+								"update",
+								"6294f584de37460839b1f685"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsDeleteCredit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/movementBank/credit/delete/6294f584de37460839b1f685",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movementBank",
+								"credit",
+								"delete",
+								"6294f584de37460839b1f685"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsGetAllDebit",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsUpdateDebit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/movemens/debit/update/(aqui id)",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movemens",
+								"debit",
+								"update",
+								"(aqui id)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MovementsDeleteDebit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/movement/debit/delete/(id aqui)",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"movement",
+								"debit",
+								"delete",
+								"(id aqui)"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
