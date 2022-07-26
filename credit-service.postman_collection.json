@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "1dcce977-2675-4ad8-939d-d1de560991ec",
+		"name": "credit-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "credit-service",
+			"item": [
+				{
+					"name": "crear credito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"1\",\r\n    \"issuerBank\": \"mibanco\",\r\n    \"typeCredit\": \"Clasica\",\r\n    \"dateDue\": \"12/2027\",\r\n    \"cardIssuer\": \"mastercart\",\r\n    \"codeCVV\": 234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/credit/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar creditos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credit/allCredits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credit",
+								"allCredits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/credit/62e000a4816b5f1ab90acf52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"credit",
+								"62e000a4816b5f1ab90acf52"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

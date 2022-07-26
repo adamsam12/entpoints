@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "a4e1bb1e-952c-42d4-927a-b26e1bbd9d6a",
+		"name": "bank-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bank-service",
+			"item": [
+				{
+					"name": "crear-bank-account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeAccount\":\"Cuenta Corriente\",\r\n    \"numberAccount\": 123456789,\r\n    \"keyAccount\": 7819,\r\n    \"availableBalanceAccount\": 4000.00,\r\n    \"idClient\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/account/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar-bank-account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/account/allAccounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"allAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/account/62e001cca8c6e1581f04f129",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"62e001cca8c6e1581f04f129"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actulaizar-bank-account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"availableBalanceAccount\": 5000.00,\r\n    \"statusAccount\":\"Inactivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/account/update/62e001cca8c6e1581f04f129",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"update",
+								"62e001cca8c6e1581f04f129"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar-banck-account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/account/delete/62e001cca8c6e1581f04f129",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"delete",
+								"62e001cca8c6e1581f04f129"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
